@@ -1,0 +1,31 @@
+INFO  : Tue Dec 18 13:33:02 CST 2018 : Looking for server list file
+INFO  : Tue Dec 18 13:33:02 CST 2018 : Server list file found in /home/pereida/Documents/skypatrol-server-backups.csv
+INFO  : Tue Dec 18 13:33:02 CST 2018 : Testing connectivity with servers...
+PING TJKWS16FLSV01.skypatrol.local (10.1.1.5) 56(84) bytes of data.
+64 bytes from 10.1.1.5 (10.1.1.5): icmp_seq=1 ttl=128 time=0.908 ms
+64 bytes from 10.1.1.5 (10.1.1.5): icmp_seq=2 ttl=128 time=0.928 ms
+64 bytes from 10.1.1.5 (10.1.1.5): icmp_seq=3 ttl=128 time=0.861 ms
+
+--- TJKWS16FLSV01.skypatrol.local ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 0.861/0.899/0.928/0.028 ms
+INFO  : Tue Dec 18 13:33:04 CST 2018 : System TJKWS16FLSV01.skypatrol.local is answering by FQDN
+ERROR : Tue Dec 18 13:33:04 CST 2018 : System ERROR_Server in not answering by FQDN
+PING 10.1.1.5 (10.1.1.5) 56(84) bytes of data.
+64 bytes from 10.1.1.5: icmp_seq=1 ttl=128 time=0.733 ms
+64 bytes from 10.1.1.5: icmp_seq=2 ttl=128 time=0.958 ms
+64 bytes from 10.1.1.5: icmp_seq=3 ttl=128 time=0.960 ms
+
+--- 10.1.1.5 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 0.733/0.883/0.960/0.111 ms
+INFO  : Tue Dec 18 13:33:06 CST 2018 : System 10.1.1.5 is answering by IP
+PING 10.1.1.10 (10.1.1.10) 56(84) bytes of data.
+From 10.1.1.141 icmp_seq=1 Destination Host Unreachable
+From 10.1.1.141 icmp_seq=2 Destination Host Unreachable
+From 10.1.1.141 icmp_seq=3 Destination Host Unreachable
+
+--- 10.1.1.10 ping statistics ---
+3 packets transmitted, 0 received, +3 errors, 100% packet loss, time 1999ms
+pipe 3
+ERROR : Tue Dec 18 13:33:09 CST 2018 : System 10.1.1.10 in not answering by IP
