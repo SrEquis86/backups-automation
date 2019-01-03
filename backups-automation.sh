@@ -54,7 +54,9 @@ done
 for Server in $(cat $ServerFile | cut -d "," -f "1")
 	do
 	echo $Server-$(grep $Server $ServerFile | cut -d "," -f 3 )
-	#mount --type cifs //$Server/$(grep $Server $ServerFile | cut -d "," -f 3 ) ./$Server_$(grep $Server $ServerFile | cut -d "," -f 3) -o ro,user="$BackupUser",pass="$BackupPass"
+	mount --type cifs //$Server/$(grep $Server $ServerFile | cut -d "," -f 3 ) /mnt/ -o ro,user="$BackupUser",pass="$BackupPass"
+	mkdir /backups/$(grep $Server $ServerFile | cut -d "," -f 3 )_$(date +%D)
+	rsync -avPh /mnt/* /backups/$(grep $Server $ServerFile | cut -d "," -f 3 )_$(date +%D) 
 done
 
 
