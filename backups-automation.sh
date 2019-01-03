@@ -57,6 +57,7 @@ for Server in $(cat $ServerFile | cut -d "," -f "1")
 	mount --type cifs //$Server/$(grep $Server $ServerFile | cut -d "," -f 3 ) /mnt/ -o ro,username="$BackupUser",pass="$BackupPass",domain=skypatrol.local
 	mkdir  /backups/$(grep $Server $ServerFile | cut -d "," -f 3 )_$(date +%Y-%m-%d)
 	rsync -avPh /mnt/* /backups/$(grep $Server $ServerFile | cut -d "," -f 3 )_$(date +%Y-%m-%d) 
+	umount /mnt
 done
 
 
